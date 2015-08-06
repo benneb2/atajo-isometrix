@@ -1,0 +1,46 @@
+<card id="landing" fill="true" >
+
+<face id="landingFront" settings="default:true" controller="_landing.Ctrl">
+    <ctl></ctl>
+    <ctr></ctr>
+    <content>
+      <ul>
+       <li class="cardListElement">
+         <div style="float: left; width: 50%">
+           <table class="f20">
+            <tr>
+              <td class="gui-extra" onClick="layout.show('IncidentCapture');">&#xf044;
+                <x class="txtTitle" >Add Incident</x><br/>
+                <x class="cardListElementSubText">Create a new incident report</x>
+              </td>
+            </tr>
+            <tr>
+              <td class="gui-extra" onClick="layout.show('help');">&#xf059;
+                <x class="txtTitle">Help</x><br/>
+                <x class="cardListElementSubText">Frequently asked questions</x>
+              </td>
+            </tr>
+            <tr>
+              <td class="gui-extra" onClick="app.doLogout();">&#xf08b;
+                <x class="txtTitle">Logout</x><br/>
+                <x class="cardListElementSubText">Log out of your current session</x>
+              </td>
+            </tr>
+           </table>
+         </div>
+         <div style="float: right; width: 50%">
+           <table>
+             <tr>
+               <td>
+                 <img src="../www/img/logomain.png">
+               </td>
+             </tr>
+           </table>
+         </div>
+        </li>
+      </ul>
+    </content>
+    <cbl></cbl>
+    <cbr></cbr>
+</face>
+</card>

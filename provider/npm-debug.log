@@ -1,0 +1,366 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'collection' ]
+2 info using npm@2.10.1
+3 info using node@v0.12.4
+4 verbose install initial load of E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\package.json
+5 warn package.json AtajoBaseProvider@1.0.1 No README data
+6 warn package.json AtajoBaseProvider@1.0.1 license should be a valid SPDX license expression
+7 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\cli-clear\package.json
+8 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\cli-color\package.json
+9 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\express\package.json
+10 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\fs-extra\package.json
+11 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\jQuery\package.json
+12 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\lz-string\package.json
+13 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\moment\package.json
+14 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\mssql\package.json
+15 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\ncp\package.json
+16 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\node-minify\package.json
+17 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\nodemailer\package.json
+18 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\nodemailer-smtp-transport\package.json
+19 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\pdfkit\package.json
+20 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\progress\package.json
+21 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\prompt\package.json
+22 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\qrcode-npm\package.json
+23 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\request\package.json
+24 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\socket.io-client\package.json
+25 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\unzip\package.json
+26 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\watch\package.json
+27 verbose installManyTop reading scoped package data from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\xml2js\package.json
+28 info package.json cli-clear@1.0.2 No license field.
+29 info package.json jQuery@1.7.4 No license field.
+30 info package.json fs-extra@0.16.5 No license field.
+31 info package.json moment@2.10.3 No license field.
+32 info package.json node-minify@0.12.1 No license field.
+33 info package.json pdfkit@0.7.1 No license field.
+34 info package.json progress@1.1.8 No license field.
+35 info package.json prompt@0.2.14 No license field.
+36 info package.json watch@0.13.0 No license field.
+37 verbose readDependencies loading dependencies from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\package.json
+38 silly cache add args [ 'collection', null ]
+39 verbose cache add spec collection
+40 silly cache add parsed spec { raw: 'collection',
+40 silly cache add   scope: null,
+40 silly cache add   name: 'collection',
+40 silly cache add   rawSpec: '',
+40 silly cache add   spec: '*',
+40 silly cache add   type: 'range' }
+41 silly addNamed collection@*
+42 verbose addNamed "*" is a valid semver range for collection
+43 silly addNameRange { name: 'collection', range: '*', hasData: false }
+44 silly mapToRegistry name collection
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry uri https://registry.npmjs.org/collection
+48 verbose addNameRange registry:https://registry.npmjs.org/collection not in flight; fetching
+49 verbose request uri https://registry.npmjs.org/collection
+50 verbose request no auth needed
+51 info attempt registry request try #1 at 10:40:08 AM
+52 verbose request id aabf2dafbd9f693e
+53 verbose etag "B9HDNUPSHORO6XN2S5ELOVTXX"
+54 http request GET https://registry.npmjs.org/collection
+55 http 304 https://registry.npmjs.org/collection
+56 silly get cb [ 304,
+56 silly get   { date: 'Wed, 29 Jul 2015 08:40:20 GMT',
+56 silly get     via: '1.1 varnish',
+56 silly get     'cache-control': 'max-age=60',
+56 silly get     etag: '"B9HDNUPSHORO6XN2S5ELOVTXX"',
+56 silly get     age: '0',
+56 silly get     connection: 'keep-alive',
+56 silly get     'x-served-by': 'cache-lcy1123-LCY',
+56 silly get     'x-cache': 'MISS',
+56 silly get     'x-cache-hits': '0',
+56 silly get     'x-timer': 'S1438159220.240275,VS0,VE170',
+56 silly get     vary: 'Accept' } ]
+57 verbose etag https://registry.npmjs.org/collection from cache
+58 verbose get saving collection to C:\Users\Christiaan\AppData\Roaming\npm-cache\registry.npmjs.org\collection\.cache.json
+59 silly addNameRange number 2 { name: 'collection', range: '*', hasData: true }
+60 silly addNameRange versions [ 'collection',
+60 silly addNameRange   [ '0.1.0', '0.1.1', '0.1.2', '0.1.3', '0.1.4', '0.1.5', '0.1.6' ] ]
+61 silly addNamed collection@0.1.6
+62 verbose addNamed "0.1.6" is a plain semver version for collection
+63 silly cache afterAdd collection@0.1.6
+64 verbose afterAdd C:\Users\Christiaan\AppData\Roaming\npm-cache\collection\0.1.6\package\package.json not in flight; writing
+65 verbose afterAdd C:\Users\Christiaan\AppData\Roaming\npm-cache\collection\0.1.6\package\package.json written
+66 silly install resolved [ { name: 'collection',
+66 silly install resolved     id: 'collection',
+66 silly install resolved     version: '0.1.6',
+66 silly install resolved     description: 'Node.js cross-platform native collection library',
+66 silly install resolved     keywords: [ 'collection', 'native', 'util', 'vector', 'set', 'map' ],
+66 silly install resolved     author: { name: 'Thomas Feng', email: 'tfeng@berkeley.edu' },
+66 silly install resolved     homepage: 'http://tfeng.github.io/collection',
+66 silly install resolved     repository:
+66 silly install resolved      { type: 'git',
+66 silly install resolved        url: 'git+https://github.com/tfeng/collection.git',
+66 silly install resolved        web: 'https://github.com/tfeng/collection' },
+66 silly install resolved     bugs: { url: 'https://github.com/tfeng/collection/issues' },
+66 silly install resolved     main: './lib/collection.js',
+66 silly install resolved     licenses: [ [Object] ],
+66 silly install resolved     dependencies: { bindings: 'latest' },
+66 silly install resolved     scripts: { install: 'node-gyp rebuild' },
+66 silly install resolved     gypfile: true,
+66 silly install resolved     gitHead: '0e7545cfd5f5b02d3fa5dba8e6b95d0a1f6724f9',
+66 silly install resolved     _id: 'collection@0.1.6',
+66 silly install resolved     _shasum: '971cf4f80f598f5f170a7067d1ac2083099580fd',
+66 silly install resolved     _from: 'collection@*',
+66 silly install resolved     _npmVersion: '1.4.28',
+66 silly install resolved     _npmUser: { name: 'tfeng', email: 'tfeng@berkeley.edu' },
+66 silly install resolved     maintainers: [ [Object] ],
+66 silly install resolved     dist:
+66 silly install resolved      { shasum: '971cf4f80f598f5f170a7067d1ac2083099580fd',
+66 silly install resolved        tarball: 'http://registry.npmjs.org/collection/-/collection-0.1.6.tgz' },
+66 silly install resolved     directories: {},
+66 silly install resolved     _resolved: 'https://registry.npmjs.org/collection/-/collection-0.1.6.tgz',
+66 silly install resolved     readme: 'ERROR: No README data found!' } ]
+67 info install collection@0.1.6 into E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider
+68 info installOne collection@0.1.6
+69 verbose installOne of collection to E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider not in flight; installing
+70 verbose lock using C:\Users\Christiaan\AppData\Roaming\npm-cache\_locks\collection-badf0ae1811dc59d.lock for E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection
+71 silly install write writing collection 0.1.6 to E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection
+72 verbose unbuild node_modules\collection
+73 silly gentlyRm E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection is being purged from base E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider
+74 verbose gentlyRm don't care about contents; nuking E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection
+75 verbose tar unpack C:\Users\Christiaan\AppData\Roaming\npm-cache\collection\0.1.6\package.tgz
+76 verbose tar unpacking to E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection
+77 silly gentlyRm E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection is being purged
+78 verbose gentlyRm don't care about contents; nuking E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection
+79 silly gunzTarPerm modes [ '777', '666' ]
+80 silly gunzTarPerm extractEntry package.json
+81 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+82 silly gunzTarPerm extractEntry README.md
+83 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+84 silly gunzTarPerm extractEntry lib/collection.js
+85 silly gunzTarPerm modified mode [ 'lib/collection.js', 420, 438 ]
+86 silly gunzTarPerm extractEntry build/Makefile
+87 silly gunzTarPerm modified mode [ 'build/Makefile', 420, 438 ]
+88 silly gunzTarPerm extractEntry build/NativeTypes.target.mk
+89 silly gunzTarPerm modified mode [ 'build/NativeTypes.target.mk', 420, 438 ]
+90 silly gunzTarPerm extractEntry build/Release/.deps/Release/NativeTypes.node.d
+91 silly gunzTarPerm modified mode [ 'build/Release/.deps/Release/NativeTypes.node.d', 420, 438 ]
+92 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/NativeTypes/src/Map.o.d
+93 silly gunzTarPerm modified mode [ 'build/Release/.deps/Release/obj.target/NativeTypes/src/Map.o.d',
+93 silly gunzTarPerm   420,
+93 silly gunzTarPerm   438 ]
+94 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/NativeTypes/src/NativeTypes.o.d
+95 silly gunzTarPerm modified mode [ 'build/Release/.deps/Release/obj.target/NativeTypes/src/NativeTypes.o.d',
+95 silly gunzTarPerm   420,
+95 silly gunzTarPerm   438 ]
+96 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/NativeTypes/src/Set.o.d
+97 silly gunzTarPerm modified mode [ 'build/Release/.deps/Release/obj.target/NativeTypes/src/Set.o.d',
+97 silly gunzTarPerm   420,
+97 silly gunzTarPerm   438 ]
+98 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/NativeTypes/src/Vector.o.d
+99 silly gunzTarPerm modified mode [ 'build/Release/.deps/Release/obj.target/NativeTypes/src/Vector.o.d',
+99 silly gunzTarPerm   420,
+99 silly gunzTarPerm   438 ]
+100 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/NativeTypes/src/common.o.d
+101 silly gunzTarPerm modified mode [ 'build/Release/.deps/Release/obj.target/NativeTypes/src/common.o.d',
+101 silly gunzTarPerm   420,
+101 silly gunzTarPerm   438 ]
+102 silly gunzTarPerm extractEntry build/Release/NativeTypes.node
+103 silly gunzTarPerm modified mode [ 'build/Release/NativeTypes.node', 493, 511 ]
+104 silly gunzTarPerm extractEntry build/Release/linker.lock
+105 silly gunzTarPerm modified mode [ 'build/Release/linker.lock', 420, 438 ]
+106 silly gunzTarPerm extractEntry build/Release/obj.target/NativeTypes/src/Map.o
+107 silly gunzTarPerm modified mode [ 'build/Release/obj.target/NativeTypes/src/Map.o', 420, 438 ]
+108 silly gunzTarPerm extractEntry build/Release/obj.target/NativeTypes/src/NativeTypes.o
+109 silly gunzTarPerm modified mode [ 'build/Release/obj.target/NativeTypes/src/NativeTypes.o',
+109 silly gunzTarPerm   420,
+109 silly gunzTarPerm   438 ]
+110 silly gunzTarPerm extractEntry build/Release/obj.target/NativeTypes/src/Set.o
+111 silly gunzTarPerm modified mode [ 'build/Release/obj.target/NativeTypes/src/Set.o', 420, 438 ]
+112 silly gunzTarPerm extractEntry build/Release/obj.target/NativeTypes/src/Vector.o
+113 silly gunzTarPerm modified mode [ 'build/Release/obj.target/NativeTypes/src/Vector.o', 420, 438 ]
+114 silly gunzTarPerm extractEntry build/Release/obj.target/NativeTypes/src/common.o
+115 silly gunzTarPerm modified mode [ 'build/Release/obj.target/NativeTypes/src/common.o', 420, 438 ]
+116 silly gunzTarPerm extractEntry build/binding.Makefile
+117 silly gunzTarPerm modified mode [ 'build/binding.Makefile', 420, 438 ]
+118 silly gunzTarPerm extractEntry build/config.gypi
+119 silly gunzTarPerm modified mode [ 'build/config.gypi', 420, 438 ]
+120 silly gunzTarPerm extractEntry build/gyp-mac-tool
+121 silly gunzTarPerm modified mode [ 'build/gyp-mac-tool', 493, 511 ]
+122 silly gunzTarPerm extractEntry src/Map.cc
+123 silly gunzTarPerm modified mode [ 'src/Map.cc', 420, 438 ]
+124 silly gunzTarPerm extractEntry src/Map.h
+125 silly gunzTarPerm modified mode [ 'src/Map.h', 420, 438 ]
+126 silly gunzTarPerm extractEntry src/NativeTypes.cc
+127 silly gunzTarPerm modified mode [ 'src/NativeTypes.cc', 420, 438 ]
+128 silly gunzTarPerm extractEntry src/Set.cc
+129 silly gunzTarPerm modified mode [ 'src/Set.cc', 420, 438 ]
+130 silly gunzTarPerm extractEntry src/Set.h
+131 silly gunzTarPerm modified mode [ 'src/Set.h', 420, 438 ]
+132 silly gunzTarPerm extractEntry src/Vector.cc
+133 silly gunzTarPerm modified mode [ 'src/Vector.cc', 420, 438 ]
+134 silly gunzTarPerm extractEntry src/Vector.h
+135 silly gunzTarPerm modified mode [ 'src/Vector.h', 420, 438 ]
+136 silly gunzTarPerm extractEntry src/common.cc
+137 silly gunzTarPerm modified mode [ 'src/common.cc', 420, 438 ]
+138 silly gunzTarPerm extractEntry src/common.h
+139 silly gunzTarPerm modified mode [ 'src/common.h', 420, 438 ]
+140 silly gunzTarPerm extractEntry binding.gyp
+141 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
+142 silly gunzTarPerm extractEntry test/test-map.js
+143 silly gunzTarPerm modified mode [ 'test/test-map.js', 420, 438 ]
+144 silly gunzTarPerm extractEntry test/test-set.js
+145 silly gunzTarPerm modified mode [ 'test/test-set.js', 420, 438 ]
+146 silly gunzTarPerm extractEntry test/test-vector.js
+147 silly gunzTarPerm modified mode [ 'test/test-vector.js', 420, 438 ]
+148 verbose write writing to E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\package.json
+149 info preinstall collection@0.1.6
+150 verbose readDependencies loading dependencies from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\package.json
+151 silly prepareForInstallMany adding bindings@latest from collection dependencies
+152 verbose readDependencies loading dependencies from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\package.json
+153 silly cache add args [ 'bindings@latest', null ]
+154 verbose cache add spec bindings@latest
+155 silly cache add parsed spec { raw: 'bindings@latest',
+155 silly cache add   scope: null,
+155 silly cache add   name: 'bindings',
+155 silly cache add   rawSpec: 'latest',
+155 silly cache add   spec: 'latest',
+155 silly cache add   type: 'tag' }
+156 silly addNamed bindings@latest
+157 verbose addNamed "latest" is being treated as a dist-tag for bindings
+158 info addNameTag [ 'bindings', 'latest' ]
+159 silly mapToRegistry name bindings
+160 silly mapToRegistry using default registry
+161 silly mapToRegistry registry https://registry.npmjs.org/
+162 silly mapToRegistry uri https://registry.npmjs.org/bindings
+163 verbose addNameTag registry:https://registry.npmjs.org/bindings not in flight; fetching
+164 verbose request uri https://registry.npmjs.org/bindings
+165 verbose request no auth needed
+166 info attempt registry request try #1 at 10:40:15 AM
+167 verbose etag "BCS5XYG9ISNJFNKEL5FLOI5HX"
+168 http request GET https://registry.npmjs.org/bindings
+169 http 304 https://registry.npmjs.org/bindings
+170 silly get cb [ 304,
+170 silly get   { date: 'Wed, 29 Jul 2015 08:40:21 GMT',
+170 silly get     via: '1.1 varnish',
+170 silly get     'cache-control': 'max-age=60',
+170 silly get     etag: '"BCS5XYG9ISNJFNKEL5FLOI5HX"',
+170 silly get     age: '9',
+170 silly get     connection: 'keep-alive',
+170 silly get     'x-served-by': 'cache-lcy1135-LCY',
+170 silly get     'x-cache': 'HIT',
+170 silly get     'x-cache-hits': '3',
+170 silly get     'x-timer': 'S1438159221.739783,VS0,VE0',
+170 silly get     vary: 'Accept' } ]
+171 verbose etag https://registry.npmjs.org/bindings from cache
+172 verbose get saving bindings to C:\Users\Christiaan\AppData\Roaming\npm-cache\registry.npmjs.org\bindings\.cache.json
+173 silly addNameTag next cb for bindings with tag latest
+174 silly addNamed bindings@1.2.1
+175 verbose addNamed "1.2.1" is a plain semver version for bindings
+176 silly cache afterAdd bindings@1.2.1
+177 verbose afterAdd C:\Users\Christiaan\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json not in flight; writing
+178 verbose afterAdd C:\Users\Christiaan\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json written
+179 silly install resolved [ { name: 'bindings',
+179 silly install resolved     description: 'Helper module for loading your native module\'s .node file',
+179 silly install resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+179 silly install resolved     version: '1.2.1',
+179 silly install resolved     author:
+179 silly install resolved      { name: 'Nathan Rajlich',
+179 silly install resolved        email: 'nathan@tootallnate.net',
+179 silly install resolved        url: 'http://tootallnate.net' },
+179 silly install resolved     repository:
+179 silly install resolved      { type: 'git',
+179 silly install resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+179 silly install resolved     main: './bindings.js',
+179 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+179 silly install resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
+179 silly install resolved     license: 'MIT',
+179 silly install resolved     gitHead: 'e404152ee27f8478ccbc7122ee051246e8e5ec02',
+179 silly install resolved     _id: 'bindings@1.2.1',
+179 silly install resolved     scripts: {},
+179 silly install resolved     _shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+179 silly install resolved     _from: 'bindings@latest',
+179 silly install resolved     _npmVersion: '1.4.14',
+179 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+179 silly install resolved     maintainers: [ [Object], [Object] ],
+179 silly install resolved     dist:
+179 silly install resolved      { shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+179 silly install resolved        tarball: 'http://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz' },
+179 silly install resolved     directories: {},
+179 silly install resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz',
+179 silly install resolved     readme: 'ERROR: No README data found!' } ]
+180 info install bindings@1.2.1 into E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection
+181 info installOne bindings@1.2.1
+182 verbose installOne of bindings to E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection not in flight; installing
+183 verbose lock using C:\Users\Christiaan\AppData\Roaming\npm-cache\_locks\bindings-0a847386b161b6f1.lock for E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings
+184 silly install write writing bindings 1.2.1 to E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings
+185 verbose unbuild node_modules\collection\node_modules\bindings
+186 silly gentlyRm E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings is being purged from base E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider
+187 verbose gentlyRm don't care about contents; nuking E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings
+188 verbose tar unpack C:\Users\Christiaan\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz
+189 verbose tar unpacking to E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings
+190 silly gentlyRm E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings is being purged
+191 verbose gentlyRm don't care about contents; nuking E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings
+192 silly gunzTarPerm modes [ '777', '666' ]
+193 silly gunzTarPerm extractEntry package.json
+194 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+195 silly gunzTarPerm extractEntry README.md
+196 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+197 silly gunzTarPerm extractEntry bindings.js
+198 silly gunzTarPerm modified mode [ 'bindings.js', 420, 438 ]
+199 verbose write writing to E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings\package.json
+200 info preinstall bindings@1.2.1
+201 verbose readDependencies loading dependencies from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings\package.json
+202 verbose readDependencies loading dependencies from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings\package.json
+203 silly install resolved []
+204 verbose about to build E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings
+205 info build E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings
+206 info linkStuff bindings@1.2.1
+207 silly linkStuff bindings@1.2.1 has E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules as its parent node_modules
+208 verbose linkBins bindings@1.2.1
+209 verbose linkMans bindings@1.2.1
+210 verbose rebuildBundles bindings@1.2.1
+211 info install bindings@1.2.1
+212 info postinstall bindings@1.2.1
+213 verbose unlock done using C:\Users\Christiaan\AppData\Roaming\npm-cache\_locks\bindings-0a847386b161b6f1.lock for E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection\node_modules\bindings
+214 verbose about to build E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection
+215 info build E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection
+216 info linkStuff collection@0.1.6
+217 silly linkStuff collection@0.1.6 has E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules as its parent node_modules
+218 verbose linkBins collection@0.1.6
+219 verbose linkMans collection@0.1.6
+220 verbose rebuildBundles collection@0.1.6
+221 verbose rebuildBundles [ 'bindings' ]
+222 info install collection@0.1.6
+223 verbose unsafe-perm in lifecycle true
+224 info collection@0.1.6 Failed to exec install script
+225 verbose unlock done using C:\Users\Christiaan\AppData\Roaming\npm-cache\_locks\collection-badf0ae1811dc59d.lock for E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection
+226 verbose stack Error: collection@0.1.6 install: `node-gyp rebuild`
+226 verbose stack Exit status 1
+226 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:213:16)
+226 verbose stack     at EventEmitter.emit (events.js:110:17)
+226 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+226 verbose stack     at ChildProcess.emit (events.js:110:17)
+226 verbose stack     at maybeClose (child_process.js:1015:16)
+226 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+227 verbose pkgid collection@0.1.6
+228 verbose cwd E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider
+229 error Windows_NT 6.3.9600
+230 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "collection"
+231 error node v0.12.4
+232 error npm  v2.10.1
+233 error code ELIFECYCLE
+234 error collection@0.1.6 install: `node-gyp rebuild`
+234 error Exit status 1
+235 error Failed at the collection@0.1.6 install script 'node-gyp rebuild'.
+235 error This is most likely a problem with the collection package,
+235 error not with npm itself.
+235 error Tell the author that this fails on your system:
+235 error     node-gyp rebuild
+235 error You can get their info via:
+235 error     npm owner ls collection
+235 error There is likely additional logging output above.
+236 verbose exit [ 1, true ]
+237 verbose unbuild node_modules\collection
+238 info preuninstall collection@0.1.6
+239 info uninstall collection@0.1.6
+240 verbose unbuild rmStuff collection@0.1.6 from E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules
+241 info postuninstall collection@0.1.6
+242 silly gentlyRm E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection is being purged from base E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider
+243 verbose gentlyRm don't care about contents; nuking E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection
+244 silly vacuum-fs purging E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules\collection
+245 silly vacuum-fs quitting because other entries in E:\Isometrix\Atajo\Atajo-Provider-2.1.2\provider\node_modules

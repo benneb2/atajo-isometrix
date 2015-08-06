@@ -1,0 +1,203 @@
+
+{
+
+
+   "EMAIL"      :
+   {
+      "DEVELOPER"     : "support@atajo.co.za",
+      "SUPPORT"       : "support@atajo.co.za",
+      "ADMINISTRATOR" : "support@atajo.co.za"
+   },
+
+   "VERSIONS"   :
+   {
+    	"DEV" : {  "ID" : "1.0", "DEBUG":true,  "COREVERSION" : "1.0" },
+      "QAS" : { "ID"  : "1.0", "DEBUG":true,  "COREVERSION" : "1.0" },
+      "PRD" : { "ID"  : "1.0", "DEBUG":false, "COREVERSION" : "1.0" }
+   },
+
+   "DEVICE" :
+   {
+
+      "ALLOW"          : {
+
+          "WP8"     : false,
+          "ANDROID" : true,
+          "IOS"     : true,
+          "BB10"    : false,
+          "WEB"     : false
+      },
+
+       "enableLocation"          : true,
+       "enablePushNotifications" : false
+
+   },
+
+   "SETTINGS" :
+   {
+      "sendCredentials" : true,
+
+      "pinLock" :
+            {
+              "enabled" : false,
+              "timeout" : 2
+            },
+
+      "jobQueue" :
+            {
+              "visible"    : true,
+              "maxJobs"    : 0,
+              "jobLife"    : 0,
+              "dataLife"   : 0,
+              "showBubble" : true
+            },
+
+            "login": {
+
+                        "enabled"  : true,
+                        "heading"  : " ",
+                        "fields": [
+                            {
+                                "name": "username",
+                                "label": "Username",
+                                "type": "text"
+                            },
+                            {
+                                "name": "password",
+                                "label": "Password",
+                                "type": "password"
+                            }
+                        ]
+
+                    },
+
+
+      "menuIcon"       : "&#xf0c9;",
+      "jobQueueIcon"   : "&#xf019;"
+
+
+    },
+
+    "LOADER"     :
+        {
+      "lines"     : 22,
+      "length"    : 3,
+      "width"     : 3,
+      "radius"    : 20,
+      "corners"   : 1,
+      "rotate"    : 0,
+      "direction" : 1,
+      "color"     : "#fff",
+      "speed"     : 1.2,
+      "trail"     : 30,
+      "shadow"    : false,
+      "hwaccel"   : true,
+      "className" : "spinner",
+      "zIndex"    :  2e9,
+      "top"       : "50%",
+      "left"      : "50%"
+      },
+
+
+    "LAYOUT" : {
+        "small": {
+          "Landing": {
+              "menu": true,
+              "icon": "&#xf015;",
+              "label": "Landing Page",
+              "subtext": "",
+              "views": ["landing"],
+              "default": true
+          },
+          "IncidentCapture": {
+              "menu": true,
+              "icon": "&#xf044;",
+              "label": "Incident Capture",
+              "subtext": "Create a new incident report",
+              "views": [
+                "incidentSteps",
+                "incidentCapture"
+              ],
+              "layout": "<table width='100%'><tr><td class='_incidentSteps' width='18%'></td><td class='_incidentCapture' width='82%'></td></tr></table>",
+              "default": false
+            },
+          "help": {
+              "menu": true,
+              "icon": "&#xf059;",
+              "label": "Help",
+              "subtext": "Frequently asked questions",
+              "views": ["help"],
+              "default": false
+          },
+            "showControls": {
+                "menu": true,
+                "icon": "&#xf004;",
+                "label": "Show Controls",
+                "subtext": "",
+                "views": ["showControls"],
+                "default": false
+            }
+
+        },
+        "large": {
+          "Landing": {
+              "menu": true,
+              "icon": "&#xf015;",
+              "label": "Landing Page",
+              "subtext": "",
+              "views": ["landing"],
+              "default": true
+          },
+          "IncidentCapture": {
+              "menu": true,
+              "icon": "&#xf044;",
+              "label": "Incident Capture",
+              "subtext": "Create a new incident report",
+              "views": [
+                "incidentSteps",
+                "incidentCapture"
+              ],
+              "layout": "<table width='100%'><tr><td class='_incidentSteps' width='18%'></td><td class='_incidentCapture' width='82%'></td></tr></table>",
+              "default": false
+            },
+          "help": {
+              "menu": true,
+              "icon": "&#xf059;",
+              "label": "Help",
+              "subtext": "Frequently asked questions",
+              "views": ["help"],
+              "default": false
+          },
+            "showControls": {
+                "menu": true,
+                "icon": "&#xf004;",
+                "label": "Show Dynamic Controls",
+                "subtext": "",
+                "views": ["showControls"],
+                "default": false
+            }
+
+        }
+    },
+    "SCROLL" : {
+
+     "forceLegacy" : true
+
+ },
+    "SERVICES":
+        [
+          {
+            "service":"controlService",
+            "label":"Incident Management Controls",
+            "key":"guid",
+            "handler":"controlHandler"
+          }
+        ],
+   "ACTIONS":
+        [
+          {
+             "action" : "postIncident",
+             "handler" : "jobPostHandler"
+           }
+        ]
+}

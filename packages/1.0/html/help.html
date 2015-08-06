@@ -1,0 +1,61 @@
+<card id="help" fill="true" flip="rl">
+
+<face id="helpFront" settings="default:true" controller="_help.Ctrl">
+    <ctl>Help</ctl>
+    <ctr></ctr>
+    <content>
+      <ul>
+        <li class="cardListElement">
+          <table>
+            <tr>
+              <td class="txtTitle" flip-target="topic1">Help Topic 1<br /><x class="cardListElementSubText">The first topic in the help.</x></td>
+            </tr>
+          </table>
+        </li>
+        <li class="cardListElement">
+          <table>
+            <tr>
+              <td class="txtTitle" flip-target="topic2">Help Topic 2<br /><x class="cardListElementSubText">The second topic in the help.</x></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </content>
+    <cbl></cbl>
+    <cbr></cbr>
+</face>
+
+
+<face id="topic1" face="back">
+
+    <ctl>Help Topic 1</ctl>
+    <ctr class="gui" flip-target="close">x</ctr>
+    <content>
+
+        <placeholder>
+              This is help section one - and provides the user with information relevant to the first help topic.
+        </placeholder>
+
+
+    </content>
+    <cbl></cbl>
+    <cbr></cbr>
+</face>
+
+<face id="topic2" face="back">
+
+    <ctl>Help Topic 2</ctl>
+    <ctr class="gui" flip-target="close">x</ctr>
+    <content>
+
+        <placeholder>
+              This is help section two - and provides the user with information relevant to the second help topic.
+        </placeholder>
+
+
+    </content>
+    <cbl></cbl>
+    <cbr></cbr>
+</face>
+
+</card>

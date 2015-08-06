@@ -1,0 +1,123 @@
+<card id="showControls" fill="true" flip="rl">
+
+  <face id="showControlsFront" settings="default:true" controller="_showControls.getAll">
+    <ctl>Controls for Incident Management</ctl>
+    <ctr class="gui-extra" flip-target="showControlsHelp">&#xf059;</ctr>
+    <content>
+      <placeholder ng-show="data.length == 0"> No Data</placeholder>
+      <form>
+        <x >
+          <div ng-repeat="control in controls">
+            <x ng-if="control.AddVisible">
+              <!--  This section is if the control is a parent-->
+              <x ng-if="control.ParentControl == null">
+                <label class="txtTitle" >{{control.ModuleDefinitionLabel}}</label>
+                <x ng-switch="control.ModuleDefinitionType">
+
+                  <x ng-switch-when="Textbox"></br><input type="text" ng-model="control.value"  /></x>
+
+                  <x ng-switch-when="Text Area"></br><textarea  ng-model="control.value" rows="5" width=100%></textarea></x>
+
+                  <x ng-switch-when="Dropdown">
+                  </br>
+                  <select ng-model="control.value" ng-options="value.SourceList for value in control.controlValues" ng-show="{{value.HierarchyLevel}}==1">
+                    <option value="">--- Please Select an Option ---</option>
+                  </select>
+                </x>
+
+                <x ng-switch-when="Checkbox List">
+                  <div ng-repeat="value in control.controlValues">
+                      <input type="checkbox" ng-model="value.isChecked"/>
+                      <label>{{value.SourceList}}</label>
+                      <x ng-if="value.HasChild">
+                        <div ng-repeat="child1 in value.Children">
+                          <x class="gui-extra">&#xf054;</x><input ng-hide type="checkbox" ng-model="child1.isChecked"/>
+                          <label>{{child1.SourceList}}</label>
+                          <x ng-if="child1.HasChild">
+                            <div ng-repeat="child2 in child1.Children">
+                              <x class="gui-extra">&#xf054;</x><x class="gui-extra">&#xf054;</x><input ng-hide type="checkbox" ng-model="child2.isChecked"/>
+                              <label>{{child2.SourceList}}</label>
+                            </x>
+                          </div>
+                        </div>
+                      </x>
+                  </div>
+                </x>
+
+                <x ng-switch-when="Calendar">
+                  <input type="date" ng-model="control.value"/>
+                </x>
+
+                <x ng-switch-default><input type="{{control.ControlType}}" ng-model="control.value"  required/></x>
+              </x>
+            </x>
+
+            <!--  This section is if the control is a Child-->
+            <x ng-if="control.ParentControl != null">
+              <label class="txtTitle" >{{control.ModuleDefinitionLabel}}</label>
+              <x ng-switch="control.ModuleDefinitionType">
+
+                <x ng-switch-when="Textbox"></br><input type="text" ng-model="control.value"  /></x>
+
+                <x ng-switch-when="Text Area"></br><textarea  ng-model="control.value" rows="5" width=100%></textarea></x>
+
+                <x ng-switch-when="Dropdown">
+                </br>
+                <select ng-model="control.value" ng-options="value.SourceList for value in control.controlValues" ng-show="{{value.HierarchyLevel}}==1">
+                  <option value="">--- Please Select an Option ---</option>
+                </select>
+              </x>
+
+              <x ng-switch-when="Checkbox List">
+                <div ng-repeat="value in control.controlValues">
+                  <x  ng-show="isControlValueChecked(control.ParentControl,value.SourceList);">
+                    <input type="checkbox" ng-model="value.isChecked"/>
+                    <label>{{value.SourceList}}</label>
+                    <x ng-if="value.HasChild">
+                      <div ng-repeat="child1 in value.Children">
+                        <x class="gui-extra">&#xf054;</x><input ng-hide type="checkbox" ng-model="child1.isChecked"/>
+                        <label>{{child1.SourceList}}</label>
+                        <x ng-if="child1.HasChild">
+                          <div ng-repeat="child2 in child1.Children">
+                            <x class="gui-extra">&#xf054;</x><x class="gui-extra">&#xf054;</x><input ng-hide type="checkbox" ng-model="child2.isChecked"/>
+                            <label>{{child2.SourceList}}</label>
+                          </x>
+                        </div>
+                      </div>
+                    </x>
+                  </x>
+                </div>
+              </x>
+
+              <x ng-switch-when="Calendar">
+                <input type="date" ng-model="control.value"/>
+              </x>
+
+              <x ng-switch-default><input type="{{control.ControlType}}" ng-model="control.value"  required/></x>
+            </x>
+          </x>
+
+          </x>
+        </div>
+      </x>
+
+    </form>
+  </content>
+  <cbl></cbl>
+  <cbr onClick="_showControls.sendJob(this,'New Incident','New Incident logged',false,false);">Submit Incident</cbr>
+</face>
+
+
+<face id="showControlsHelp" face="back">
+  <ctl>HELP</ctl>
+  <ctr class="gui" flip-target="close">x</ctr>
+  <content>
+    <placeholder>
+      This is a blank help section.
+    </placeholder>
+  </content>
+  <cbl></cbl>
+  <cbr></cbr>
+</face>
+
+</card>
