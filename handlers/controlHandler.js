@@ -5,11 +5,11 @@ exports.req = function(obj, cb) {
 
    _log.d("controlHandler " + JSON.stringify(obj));
 
-   sql.getControlsWithValues(function(getControlsWithValues){
+   sql.getControls(function(controls){
 
-		_log.d("controlHandler " + JSON.stringify(getControlsWithValues));
+		_log.d("controlHandler " + JSON.stringify(controls));
 
-		obj.RESPONSE = getControlsWithValues;
+		obj.RESPONSE = controls;
 		cb(obj);
 
  });

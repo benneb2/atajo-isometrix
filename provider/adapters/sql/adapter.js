@@ -5,6 +5,213 @@ var grep = require('grep-from-array');
 
 var sql = {
 
+
+  getControls: function(callback)
+  {
+      RESPONSE = [];
+      controls = {
+        controlID :0,
+        incidentStatus: [],
+        users : [],
+        sites : [],
+        };
+
+      sql.getIncidentStatus(function(obj){
+        if(obj != false)
+        {
+          controls.incidentStatus = obj;
+        }
+
+        sql.getUsers(function(obj){
+          if(obj != false)
+          {
+            controls.users = obj;
+          }
+
+          sql.getSites(function(obj){
+            if(obj != false)
+            {
+              controls.sites = obj;
+            }
+            RESPONSE.push(controls);
+            callback(RESPONSE);
+          });
+
+        });
+      });
+
+  }
+  ,
+  buildTree: function(elements,parentId) 
+  {
+    branch = [];
+    var newElement = {
+      SiteID : 0,
+      children : []
+    };
+    for (var i in elements) {
+      var element = elements[i];
+
+        if (element.ParentID == parentId) {
+            children = sql.buildTree(elements, element.SiteID);
+            if (children) {
+              newElement.SiteID = element.SiteID;
+              newElement.Site = element.Site;
+              newElement.children = children.slice();
+            }
+            branch.push(newElement);
+        }
+    }
+    return branch;
+  }
+  ,
+
+  getSites : function(callback)
+  {
+    _log.d("getSites");
+
+    var conParams = config.conParams[GLOBAL.RELEASE];
+
+    var sqlConfig =
+    {
+      user: conParams.user,
+      password: conParams.password,
+      server: conParams.server,
+      database: conParams.database,
+      options: {
+        appName : conParams.applicationName
+      }
+    };
+
+    var queryString = "Select SiteID, ParentID,Site from [dbo].[tblSite] where isDeleted IS NULL order by Site";;
+    // _log.d(queryString);
+    var connection = new mssql.Connection(sqlConfig, function (err) {
+      if (err)
+      {
+        _log.d("getSites: mssql Conn Error " + err);
+        callback(false);
+        return;
+      }
+      var request = new mssql.Request(connection); // or: var request = connection.request();
+      request.query(queryString, function (err, recordset) {
+        if (err)
+        {
+          _log.d("getSites: Query Error " + err);
+          callback(false);
+          return;
+        }
+        else
+        {
+            _log.d("getSites: GOOD " + JSON.stringify(recordset));
+
+            siteObj = sql.buildTree(recordset,0);
+            _log.d("");
+            _log.d("getSites: siteObj " + JSON.stringify(siteObj));
+            _log.d("");
+            callback(siteObj);
+            return;
+        }
+      });
+    }); 
+  }
+  ,
+  getUsers : function(callback)
+  {
+    _log.d("getUsers");
+
+    var conParams = config.conParams[GLOBAL.RELEASE];
+
+    var sqlConfig =
+    {
+      user: conParams.user,
+      password: conParams.password,
+      server: conParams.server,
+      database: conParams.database,
+      options: {
+        appName : conParams.applicationName
+      }
+    };
+
+    var queryString = "Select UserID, FirstName,LastName from [dbo].[tblUser] where isDeleted IS NULL order by FirstName";;
+    // _log.d(queryString);
+    var connection = new mssql.Connection(sqlConfig, function (err) {
+      if (err)
+      {
+        _log.d("getUser: mssql Conn Error " + err);
+        callback(false);
+        return;
+      }
+      var request = new mssql.Request(connection); // or: var request = connection.request();
+      request.query(queryString, function (err, recordset) {
+        if (err)
+        {
+          _log.d("getUser: Query Error " + err);
+          callback(false);
+          return;
+        }
+        else
+        {
+            _log.d("getUser: GOOD " + JSON.stringify(recordset));
+            callback(recordset);
+            return;
+        }
+      });
+    }); 
+  }
+  ,
+  getIncidentStatus : function(callback)
+  {
+    _log.d("getIncidentStatus");
+
+    var conParams = config.conParams[GLOBAL.RELEASE];
+
+    var sqlConfig =
+    {
+      user: conParams.user,
+      password: conParams.password,
+      server: conParams.server,
+      database: conParams.database,
+      options: {
+        appName : conParams.applicationName
+      }
+    };
+
+    var queryString = "Select * from [dbo].[tblModuleDefinitionSourceList] where SourceID = '"+ 25 + "'";
+    // _log.d(queryString);
+    var connection = new mssql.Connection(sqlConfig, function (err) {
+      if (err)
+      {
+        _log.d("Login: mssql Conn Error " + err);
+        callback(false);
+        return;
+      }
+      var request = new mssql.Request(connection); // or: var request = connection.request();
+      request.query(queryString, function (err, recordset) {
+        if (err)
+        {
+          _log.d("Login: Query Error " + err);
+          callback(false);
+          return;
+        }
+        else
+        {
+          if(recordset.length == 0)
+          {
+            _log.d("Login: User Not Found ");
+            callback(false);
+            return;
+          }else
+          {
+            _log.d("Login: GOOD " + JSON.stringify(recordset));
+            callback(recordset);
+            return;
+          }
+        }
+      });
+    }); 
+
+  },
+
   login : function(obj,callback)
   {
 
@@ -24,7 +231,7 @@ var sql = {
     };
 
 
-    var queryString = "Select TOP 1 * from [dbo].[xtblUser] where UserName = '"+ obj.credentials.username + "'";
+    var queryString = "Select TOP 1 * from [dbo].[tblUser] where UserName = '"+ obj.credentials.username + "'";
     // _log.d(queryString);
     var connection = new mssql.Connection(sqlConfig, function (err) {
       if (err)
@@ -59,7 +266,7 @@ var sql = {
     });    
   }
   ,
-  getControlsWithValues: function(callback)
+  getControlsWithValues_old: function(callback)
   {
     var LoggedInUserID = 1;  //change this to use the actual user
     // _log.d("getControlsWithValues - Start");
@@ -100,7 +307,7 @@ var sql = {
     });
   },
 
-  getControls: function (cb, LoggedInUserID)
+  getControls_old: function (cb, LoggedInUserID)
   {
      _log.d("getControls - Start");
 

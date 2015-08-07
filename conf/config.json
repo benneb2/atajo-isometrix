@@ -35,12 +35,12 @@
 
    "SETTINGS" :
    {
-      "sendCredentials" : true,
+      "sendCredentials" : false,
 
       "pinLock" :
             {
-              "enabled" : false,
-              "timeout" : 2
+              "enabled" : true,
+              "timeout" : 200
             },
 
       "jobQueue" :
@@ -101,26 +101,26 @@
 
     "LAYOUT" : {
         "small": {
-          "Landing": {
-              "menu": true,
-              "icon": "&#xf015;",
-              "label": "Landing Page",
-              "subtext": "",
-              "views": ["landing"],
-              "default": true
-          },
           "IncidentCapture": {
               "menu": true,
               "icon": "&#xf044;",
-              "label": "Incident Capture",
+              "label": "Add Incedent",
               "subtext": "Create a new incident report",
               "views": [
                 "incidentSteps",
                 "incidentCapture"
               ],
               "layout": "<table width='100%'><tr><td class='_incidentSteps' width='18%'></td><td class='_incidentCapture' width='82%'></td></tr></table>",
-              "default": false
+              "default": true
             },
+          "reportHistory": {
+              "menu": true,
+              "icon": "&#xf1da;",
+              "label": "Report History",
+              "subtext": "View Current Reports added",
+              "views": ["reportHistory"],
+              "default": false
+          },
           "help": {
               "menu": true,
               "icon": "&#xf059;",
@@ -140,26 +140,27 @@
 
         },
         "large": {
-          "Landing": {
-              "menu": true,
-              "icon": "&#xf015;",
-              "label": "Landing Page",
-              "subtext": "",
-              "views": ["landing"],
-              "default": true
-          },
+          
           "IncidentCapture": {
               "menu": true,
               "icon": "&#xf044;",
-              "label": "Incident Capture",
+              "label": "Add Incedent",
               "subtext": "Create a new incident report",
               "views": [
                 "incidentSteps",
                 "incidentCapture"
               ],
               "layout": "<table width='100%'><tr><td class='_incidentSteps' width='18%'></td><td class='_incidentCapture' width='82%'></td></tr></table>",
-              "default": false
+              "default": true
             },
+            "reportHistory": {
+              "menu": true,
+              "icon": "&#xf1da;",
+              "label": "Report History",
+              "subtext": "View Current Reports added",
+              "views": ["reportHistory"],
+              "default": false
+          },
           "help": {
               "menu": true,
               "icon": "&#xf059;",
@@ -171,7 +172,7 @@
             "showControls": {
                 "menu": true,
                 "icon": "&#xf004;",
-                "label": "Show Dynamic Controls",
+                "label": "Show Controls",
                 "subtext": "",
                 "views": ["showControls"],
                 "default": false
@@ -189,7 +190,7 @@
           {
             "service":"controlService",
             "label":"Incident Management Controls",
-            "key":"guid",
+            "key":"controlID",
             "handler":"controlHandler"
           }
         ],
